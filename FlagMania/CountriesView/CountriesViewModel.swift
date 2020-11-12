@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol CountriesListViewModelProtocol {
+protocol CountriesListViewModelContract {
     var countries: [Country] { get set }
     
     func getTitle() -> String
     func fetchCountries(completion: @escaping (Bool) -> Void)
 }
 
-class CountriesListViewModel: CountriesListViewModelProtocol {
+class CountriesListViewModel: CountriesListViewModelContract {
     
     var countries: [Country] = []
     

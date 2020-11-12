@@ -16,6 +16,9 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        
+        let viewModel = CountriesListViewModel(apiClient: CountriesService(apiClient: APIClient()))
+        let countriesVC = CountriesListViewController(viewModel: viewModel)
+        countriesVC.coordinator = self
+        navigationController.pushViewController(countriesVC, animated: true)
     }
 }

@@ -33,7 +33,7 @@ class CountriesServiceTests: XCTestCase {
         var completionCalled = false
         let apiClient = CountriesService(apiClient: APIClient())
         
-        apiClient.fetchCountries { (_) in
+        apiClient.fetchCountries { _ in
             completionCalled = true
             countryExpectation.fulfill()
         }

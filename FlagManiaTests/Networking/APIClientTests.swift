@@ -9,6 +9,21 @@ import XCTest
 @testable import FlagMania
 
 class APIClientTests: XCTestCase {
+    
+    var session: MockURLSession!
+    var apiClient: APIClient!
+    
+    override func setUp() {
+        super.setUp()
+        self.session = createMockSession()
+        self.apiClient = createClient(session: self.session)
+    }
+    
+    override func tearDown() {
+        session = nil
+        apiClient = nil
+        super.tearDown()
+    }
 
     func test_apiClient_callsCompletion() {
         let session = createMockSession()

@@ -40,10 +40,17 @@ class CountriesListViewController: UIViewController {
                     self?.tableView.reloadData()
                 }
             case false:
-                // Show alert for error
-                print("We failed")
+                self?.showAlert()
             }
         }
+    }
+    
+    private func showAlert() {
+        let alertController = UIAlertController(title: "Error", message: "An errro occured", preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        
+        present(alertController, animated: true)
     }
 }
 
@@ -57,7 +64,7 @@ extension CountriesListViewController: UITableViewDelegate, UITableViewDataSourc
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CountryCell.reuseIdentifier, for: indexPath) as? CountryCell else { return UITableViewCell() }
         
         let country = viewModel.countries[indexPath.row]
-        cell.configue(with: country)
+        cell.configure(with: country)
         return cell
     }
 }

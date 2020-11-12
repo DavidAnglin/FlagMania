@@ -13,26 +13,14 @@ class CountryCell: UITableViewCell {
     }
     
     // MARK: IBOutlets
-    @IBOutlet weak var flagImageView: UIImageView!
+    @IBOutlet weak var flagImageView: CachedImageView!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var capitalLabel: UILabel!
         
-    func configue(with country: Country) {
+    func configure(with country: Country) {
         countryLabel.text = country.name
         capitalLabel.text = country.capital
-        
-        DispatchQueue.global(qos: .background).async {
-            if let flagImageUrl = URL(string: country.flagURL),
-                let imageData = try? Data(contentsOf: flagImageUrl) {
-                DispatchQueue.main.async {
-                    self.flagImageView.image = UIImage(data: imageData)
-                }
-            } else {
-                DispatchQueue.main.async {
-                    self.flagImageView.image = nil
-                }
-            }
-        }
+        self.flagImageView.loadImage(with: country.flagURL)
     }
     
     override func prepareForReuse() {

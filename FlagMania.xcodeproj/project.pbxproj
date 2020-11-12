@@ -28,6 +28,9 @@
 		2E8B3FDD255DBE3100EFE2DF /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8B3FDB255DBE3100EFE2DF /* CountryCell.xib */; };
 		2E8B3FE5255DCFFE00EFE2DF /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3FE4255DCFFE00EFE2DF /* CoordinatorTests.swift */; };
 		2E8B3FEC255DD1A200EFE2DF /* CountriesListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3FEB255DD1A200EFE2DF /* CountriesListViewTests.swift */; };
+		2EC57631255DE8160073C737 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC57630255DE8160073C737 /* ImageService.swift */; };
+		2EC57635255DE9B00073C737 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC57634255DE9B00073C737 /* UIImage+Extensions.swift */; };
+		2EC57640255DEC0D0073C737 /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5763F255DEC0D0073C737 /* CachedImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		2E8B3FDB255DBE3100EFE2DF /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
 		2E8B3FE4255DCFFE00EFE2DF /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		2E8B3FEB255DD1A200EFE2DF /* CountriesListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListViewTests.swift; sourceTree = "<group>"; };
+		2EC57630255DE8160073C737 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		2EC57634255DE9B00073C737 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		2EC5763F255DEC0D0073C737 /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 				2E8B3F5B255D72C400EFE2DF /* Models */,
 				2E8B3F6A255D739600EFE2DF /* Coordinators */,
 				2E8B3F5D255D732A00EFE2DF /* Networking */,
+				2EC5763E255DEBE80073C737 /* Controls */,
 				2E8B3FBD255DA52D00EFE2DF /* CountriesView */,
 				2E8B3F5E255D733A00EFE2DF /* Resources */,
 				2E8B3F33255D725A00EFE2DF /* LaunchScreen.storyboard */,
@@ -144,6 +151,7 @@
 		2E8B3F5C255D72F100EFE2DF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2EC57634255DE9B00073C737 /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -153,6 +161,7 @@
 			children = (
 				2E8B3F86255D8F6300EFE2DF /* APIClient.swift */,
 				2E8B3F80255D834600EFE2DF /* CountriesService.swift */,
+				2EC57630255DE8160073C737 /* ImageService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -227,6 +236,14 @@
 				2E8B3FE4255DCFFE00EFE2DF /* CoordinatorTests.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2EC5763E255DEBE80073C737 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				2EC5763F255DEC0D0073C737 /* CachedImageView.swift */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,10 +353,13 @@
 				2E8B3F87255D8F6300EFE2DF /* APIClient.swift in Sources */,
 				2E8B3FDC255DBE3100EFE2DF /* CountryCell.swift in Sources */,
 				2E8B3F29255D725900EFE2DF /* AppDelegate.swift in Sources */,
+				2EC57631255DE8160073C737 /* ImageService.swift in Sources */,
 				2E8B3FBF255DA5D000EFE2DF /* CountriesViewModel.swift in Sources */,
 				2E8B3FD6255DB12E00EFE2DF /* CountriesListViewController.swift in Sources */,
+				2EC57640255DEC0D0073C737 /* CachedImageView.swift in Sources */,
 				2E8B3F2B255D725900EFE2DF /* SceneDelegate.swift in Sources */,
 				2E8B3F7D255D7F9A00EFE2DF /* Country.swift in Sources */,
+				2EC57635255DE9B00073C737 /* UIImage+Extensions.swift in Sources */,
 				2E8B3F73255D7E1600EFE2DF /* Coordinator.swift in Sources */,
 				2E8B3F81255D834600EFE2DF /* CountriesService.swift in Sources */,
 			);

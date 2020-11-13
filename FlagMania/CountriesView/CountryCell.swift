@@ -20,7 +20,7 @@ class CountryCell: UITableViewCell {
     func configure(with country: Country) {
         countryLabel.text = country.name
         capitalLabel.text = country.capital
-        self.flagImageView.loadImage(with: country.flagURL)
+        flagImageView.loadImage(with: country.flagURL)
     }
     
     override func prepareForReuse() {

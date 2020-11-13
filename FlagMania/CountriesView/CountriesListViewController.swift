@@ -46,10 +46,8 @@ class CountriesListViewController: UIViewController {
     }
     
     private func showAlert() {
-        let alertController = UIAlertController(title: "Error", message: "An errro occured", preferredStyle: .alert)
-        
+        let alertController = UIAlertController(title: "Error", message: "An error occured", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        
         present(alertController, animated: true)
     }
 }
@@ -57,14 +55,18 @@ class CountriesListViewController: UIViewController {
 // MARK: TableView Methods
 extension CountriesListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.countries.count
+        return viewModel.countryCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CountryCell.reuseIdentifier, for: indexPath) as? CountryCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CountryCell.reuseIdentifier, for: indexPath) as? CountryCell,
+              let country = viewModel.getCountry(for: indexPath.row)else {
+            return UITableViewCell()
+        }
         
-        let country = viewModel.countries[indexPath.row]
         cell.configure(with: country)
         return cell
     }
+    
+    
 }

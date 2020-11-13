@@ -8,17 +8,21 @@
 import Foundation
 
 protocol CountriesListViewModelContract {
-    var countries: [Country] { get set }
+    var countryCount: Int { get }
     
     func getTitle() -> String
     func fetchCountries(completion: @escaping (Bool) -> Void)
+    func getCountry(for row: Int) -> Country?
 }
 
 class CountriesListViewModel: CountriesListViewModelContract {
     
-    var countries: [Country] = []
+    private var countries: [Country] = []
+    private var apiClient: CountriesServiceProtocol!
     
-    var apiClient: CountriesServiceProtocol!
+    var countryCount: Int {
+        return countries.count
+    }
     
     init(apiClient: CountriesServiceProtocol) {
         self.apiClient = apiClient
@@ -40,5 +44,10 @@ class CountriesListViewModel: CountriesListViewModelContract {
                 completion(false)
             }
         }
+    }
+    
+    func getCountry(for row: Int) -> Country? {
+        guard row < countries.count else { return nil }
+        return countries[row]
     }
 }

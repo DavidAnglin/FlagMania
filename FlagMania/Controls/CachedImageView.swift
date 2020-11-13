@@ -10,7 +10,7 @@
 import UIKit
 
 class CachedImageView: UIImageView {
-
+    
     private var imageEndPoint: String?
     
     override init(frame: CGRect) {

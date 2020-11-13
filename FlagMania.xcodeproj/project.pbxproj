@@ -11,7 +11,26 @@
 		2E8B3F2B255D725900EFE2DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3F2A255D725900EFE2DF /* SceneDelegate.swift */; };
 		2E8B3F32255D725A00EFE2DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8B3F31255D725A00EFE2DF /* Assets.xcassets */; };
 		2E8B3F35255D725A00EFE2DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8B3F33255D725A00EFE2DF /* LaunchScreen.storyboard */; };
-		2E8B3F40255D725A00EFE2DF /* FlagManiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3F3F255D725A00EFE2DF /* FlagManiaTests.swift */; };
+		2E8B3F73255D7E1600EFE2DF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3F72255D7E1600EFE2DF /* Coordinator.swift */; };
+		2E8B3F79255D7E9D00EFE2DF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3F78255D7E9D00EFE2DF /* AppCoordinator.swift */; };
+		2E8B3F7D255D7F9A00EFE2DF /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3F7C255D7F9A00EFE2DF /* Country.swift */; };
+		2E8B3F81255D834600EFE2DF /* CountriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3F80255D834600EFE2DF /* CountriesService.swift */; };
+		2E8B3F87255D8F6300EFE2DF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3F86255D8F6300EFE2DF /* APIClient.swift */; };
+		2E8B3F96255D929200EFE2DF /* CountriesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3F95255D929200EFE2DF /* CountriesServiceTests.swift */; };
+		2E8B3F9B255D930900EFE2DF /* CountryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E8B3F9A255D930900EFE2DF /* CountryData.json */; };
+		2E8B3FAD255D9E0E00EFE2DF /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3FAC255D9E0E00EFE2DF /* APIClientTests.swift */; };
+		2E8B3FBF255DA5D000EFE2DF /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3FBE255DA5D000EFE2DF /* CountriesViewModel.swift */; };
+		2E8B3FC6255DAB8600EFE2DF /* CountriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3FC5255DAB8600EFE2DF /* CountriesViewModelTests.swift */; };
+		2E8B3FCD255DAC2E00EFE2DF /* MockCountriesListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3FCC255DAC2E00EFE2DF /* MockCountriesListService.swift */; };
+		2E8B3FD6255DB12E00EFE2DF /* CountriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3FD4255DB12E00EFE2DF /* CountriesListViewController.swift */; };
+		2E8B3FD7255DB12E00EFE2DF /* CountriesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8B3FD5255DB12E00EFE2DF /* CountriesListViewController.xib */; };
+		2E8B3FDC255DBE3100EFE2DF /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3FDA255DBE3100EFE2DF /* CountryCell.swift */; };
+		2E8B3FDD255DBE3100EFE2DF /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8B3FDB255DBE3100EFE2DF /* CountryCell.xib */; };
+		2E8B3FE5255DCFFE00EFE2DF /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3FE4255DCFFE00EFE2DF /* CoordinatorTests.swift */; };
+		2E8B3FEC255DD1A200EFE2DF /* CountriesListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B3FEB255DD1A200EFE2DF /* CountriesListViewTests.swift */; };
+		2EC57631255DE8160073C737 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC57630255DE8160073C737 /* ImageService.swift */; };
+		2EC57635255DE9B00073C737 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC57634255DE9B00073C737 /* UIImage+Extensions.swift */; };
+		2EC57640255DEC0D0073C737 /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC5763F255DEC0D0073C737 /* CachedImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,8 +51,27 @@
 		2E8B3F34255D725A00EFE2DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E8B3F36255D725A00EFE2DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E8B3F3B255D725A00EFE2DF /* FlagManiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlagManiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E8B3F3F255D725A00EFE2DF /* FlagManiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagManiaTests.swift; sourceTree = "<group>"; };
 		2E8B3F41255D725A00EFE2DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E8B3F72255D7E1600EFE2DF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		2E8B3F78255D7E9D00EFE2DF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2E8B3F7C255D7F9A00EFE2DF /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		2E8B3F80255D834600EFE2DF /* CountriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesService.swift; sourceTree = "<group>"; };
+		2E8B3F86255D8F6300EFE2DF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		2E8B3F95255D929200EFE2DF /* CountriesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesServiceTests.swift; sourceTree = "<group>"; };
+		2E8B3F9A255D930900EFE2DF /* CountryData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CountryData.json; sourceTree = "<group>"; };
+		2E8B3FAC255D9E0E00EFE2DF /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		2E8B3FBE255DA5D000EFE2DF /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
+		2E8B3FC5255DAB8600EFE2DF /* CountriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModelTests.swift; sourceTree = "<group>"; };
+		2E8B3FCC255DAC2E00EFE2DF /* MockCountriesListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCountriesListService.swift; sourceTree = "<group>"; };
+		2E8B3FD4255DB12E00EFE2DF /* CountriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListViewController.swift; sourceTree = "<group>"; };
+		2E8B3FD5255DB12E00EFE2DF /* CountriesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountriesListViewController.xib; sourceTree = "<group>"; };
+		2E8B3FDA255DBE3100EFE2DF /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		2E8B3FDB255DBE3100EFE2DF /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
+		2E8B3FE4255DCFFE00EFE2DF /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		2E8B3FEB255DD1A200EFE2DF /* CountriesListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListViewTests.swift; sourceTree = "<group>"; };
+		2EC57630255DE8160073C737 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		2EC57634255DE9B00073C737 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		2EC5763F255DEC0D0073C737 /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +119,8 @@
 				2E8B3F5B255D72C400EFE2DF /* Models */,
 				2E8B3F6A255D739600EFE2DF /* Coordinators */,
 				2E8B3F5D255D732A00EFE2DF /* Networking */,
+				2EC5763E255DEBE80073C737 /* Controls */,
+				2E8B3FBD255DA52D00EFE2DF /* CountriesView */,
 				2E8B3F5E255D733A00EFE2DF /* Resources */,
 				2E8B3F33255D725A00EFE2DF /* LaunchScreen.storyboard */,
 				2E8B3F36255D725A00EFE2DF /* Info.plist */,
@@ -91,7 +131,10 @@
 		2E8B3F3E255D725A00EFE2DF /* FlagManiaTests */ = {
 			isa = PBXGroup;
 			children = (
-				2E8B3F3F255D725A00EFE2DF /* FlagManiaTests.swift */,
+				2E8B3FE8255DD00900EFE2DF /* Coordinator */,
+				2E8B3FCB255DAC0E00EFE2DF /* Resources */,
+				2E8B3FC4255DAB5C00EFE2DF /* CountriesView */,
+				2E8B3F8E255D922400EFE2DF /* Networking */,
 				2E8B3F41255D725A00EFE2DF /* Info.plist */,
 			);
 			path = FlagManiaTests;
@@ -100,6 +143,7 @@
 		2E8B3F5B255D72C400EFE2DF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2E8B3F7C255D7F9A00EFE2DF /* Country.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -107,6 +151,7 @@
 		2E8B3F5C255D72F100EFE2DF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2EC57634255DE9B00073C737 /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -114,6 +159,9 @@
 		2E8B3F5D255D732A00EFE2DF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				2E8B3F86255D8F6300EFE2DF /* APIClient.swift */,
+				2E8B3F80255D834600EFE2DF /* CountriesService.swift */,
+				2EC57630255DE8160073C737 /* ImageService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -129,8 +177,73 @@
 		2E8B3F6A255D739600EFE2DF /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				2E8B3F72255D7E1600EFE2DF /* Coordinator.swift */,
+				2E8B3F78255D7E9D00EFE2DF /* AppCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		2E8B3F8E255D922400EFE2DF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2E8B3F99255D92D500EFE2DF /* MockData */,
+				2E8B3F95255D929200EFE2DF /* CountriesServiceTests.swift */,
+				2E8B3FAC255D9E0E00EFE2DF /* APIClientTests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2E8B3F99255D92D500EFE2DF /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				2E8B3F9A255D930900EFE2DF /* CountryData.json */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		2E8B3FBD255DA52D00EFE2DF /* CountriesView */ = {
+			isa = PBXGroup;
+			children = (
+				2E8B3FD4255DB12E00EFE2DF /* CountriesListViewController.swift */,
+				2E8B3FBE255DA5D000EFE2DF /* CountriesViewModel.swift */,
+				2E8B3FD5255DB12E00EFE2DF /* CountriesListViewController.xib */,
+				2E8B3FDA255DBE3100EFE2DF /* CountryCell.swift */,
+				2E8B3FDB255DBE3100EFE2DF /* CountryCell.xib */,
+			);
+			path = CountriesView;
+			sourceTree = "<group>";
+		};
+		2E8B3FC4255DAB5C00EFE2DF /* CountriesView */ = {
+			isa = PBXGroup;
+			children = (
+				2E8B3FC5255DAB8600EFE2DF /* CountriesViewModelTests.swift */,
+				2E8B3FEB255DD1A200EFE2DF /* CountriesListViewTests.swift */,
+			);
+			path = CountriesView;
+			sourceTree = "<group>";
+		};
+		2E8B3FCB255DAC0E00EFE2DF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2E8B3FCC255DAC2E00EFE2DF /* MockCountriesListService.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2E8B3FE8255DD00900EFE2DF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2E8B3FE4255DCFFE00EFE2DF /* CoordinatorTests.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2EC5763E255DEBE80073C737 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				2EC5763F255DEC0D0073C737 /* CachedImageView.swift */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +298,7 @@
 					};
 					2E8B3F3A255D725A00EFE2DF = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 						TestTargetID = 2E8B3F24255D725900EFE2DF;
 					};
 				};
@@ -213,6 +327,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8B3FDD255DBE3100EFE2DF /* CountryCell.xib in Resources */,
+				2E8B3FD7255DB12E00EFE2DF /* CountriesListViewController.xib in Resources */,
 				2E8B3F35255D725A00EFE2DF /* LaunchScreen.storyboard in Resources */,
 				2E8B3F32255D725A00EFE2DF /* Assets.xcassets in Resources */,
 			);
@@ -222,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8B3F9B255D930900EFE2DF /* CountryData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,8 +349,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8B3F79255D7E9D00EFE2DF /* AppCoordinator.swift in Sources */,
+				2E8B3F87255D8F6300EFE2DF /* APIClient.swift in Sources */,
+				2E8B3FDC255DBE3100EFE2DF /* CountryCell.swift in Sources */,
 				2E8B3F29255D725900EFE2DF /* AppDelegate.swift in Sources */,
+				2EC57631255DE8160073C737 /* ImageService.swift in Sources */,
+				2E8B3FBF255DA5D000EFE2DF /* CountriesViewModel.swift in Sources */,
+				2E8B3FD6255DB12E00EFE2DF /* CountriesListViewController.swift in Sources */,
+				2EC57640255DEC0D0073C737 /* CachedImageView.swift in Sources */,
 				2E8B3F2B255D725900EFE2DF /* SceneDelegate.swift in Sources */,
+				2E8B3F7D255D7F9A00EFE2DF /* Country.swift in Sources */,
+				2EC57635255DE9B00073C737 /* UIImage+Extensions.swift in Sources */,
+				2E8B3F73255D7E1600EFE2DF /* Coordinator.swift in Sources */,
+				2E8B3F81255D834600EFE2DF /* CountriesService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +369,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E8B3F40255D725A00EFE2DF /* FlagManiaTests.swift in Sources */,
+				2E8B3FCD255DAC2E00EFE2DF /* MockCountriesListService.swift in Sources */,
+				2E8B3FE5255DCFFE00EFE2DF /* CoordinatorTests.swift in Sources */,
+				2E8B3FC6255DAB8600EFE2DF /* CountriesViewModelTests.swift in Sources */,
+				2E8B3FEC255DD1A200EFE2DF /* CountriesListViewTests.swift in Sources */,
+				2E8B3F96255D929200EFE2DF /* CountriesServiceTests.swift in Sources */,
+				2E8B3FAD255D9E0E00EFE2DF /* APIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +559,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EZVKD2Y4CX;
 				INFOPLIST_FILE = FlagManiaTests/Info.plist;
@@ -437,6 +571,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidanglin.FlagManiaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlagMania.app/FlagMania";
@@ -448,6 +583,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EZVKD2Y4CX;
 				INFOPLIST_FILE = FlagManiaTests/Info.plist;

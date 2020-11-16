@@ -36,6 +36,12 @@ class CountriesService: CountriesServiceProtocol {
             return
         }
         
+        var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        
+        let urlQueryItems = [URLQueryItem(name: "fields", value: "name;alpha2Code;capital;population;timezones")]
+        
+        components?.queryItems = urlQueryItems
+        
         apiClient.get(url: url) { data, error in
             guard error == nil else {
                 completion(.failure(.unknownError))
@@ -50,6 +56,7 @@ class CountriesService: CountriesServiceProtocol {
             let decoder = JSONDecoder()
             if let countries = try? decoder.decode([Country].self, from: data) {
                 completion(.success(countries))
+                print("Countries \(countries)")
             } else {
                 completion(.failure(.serializationError))
             }

@@ -84,10 +84,10 @@ final class MockURLSession: URLSessionProtocol {
     
     var dataTask: URLSessionDataTaskProtocol
     var currentURL: URL?
-
+    
     init(dataTask: URLSessionDataTaskProtocol) {
-         self.dataTask = dataTask
-     }
+        self.dataTask = dataTask
+    }
     
     func dataTask(with request: URLRequest, completionHandler: @escaping URLSessionProtocol.DataTaskResult) -> URLSessionDataTaskProtocol {
         currentURL = request.url
@@ -95,4 +95,3 @@ final class MockURLSession: URLSessionProtocol {
         return dataTask
     }
 }
-

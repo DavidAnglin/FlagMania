@@ -21,4 +21,11 @@ class AppCoordinator: Coordinator {
         countriesVC.coordinator = self
         navigationController.pushViewController(countriesVC, animated: true)
     }
+    
+    func showDetail(for country: Country) {
+        let viewModel = CountryDetailViewModel(country: country)
+        let countryDetailVC = CountryDetailViewController(viewModel: viewModel)
+        countryDetailVC.coordinator = self
+        navigationController.pushViewController(countryDetailVC, animated: true)
+    }
 }

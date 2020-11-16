@@ -40,7 +40,9 @@ class CountriesListViewController: UIViewController {
                     self?.tableView.reloadData()
                 }
             case false:
-                self?.showAlert()
+                DispatchQueue.main.async {
+                    self?.showAlert()
+                }
             }
         }
     }
@@ -68,5 +70,10 @@ extension CountriesListViewController: UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let country = viewModel.getCountry(for: indexPath.row) else { return }
+        coordinator?.showDetail(for: country)
+    }
 }
